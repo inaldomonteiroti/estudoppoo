@@ -63,7 +63,90 @@ class Login {
 $logar = new Login("teste@teste.com", "123456", "Inaldo Monteiro");
 // $logar->setEmail("teste/@teste.com");
 // $logar->setSenha("123456");
-$logar-> Logar();
-echo "<br>";
-echo $logar->getEmail();
-echo $logar->getNome();
+// $logar-> Logar();
+// echo "<br>";
+// echo $logar->getEmail();
+// echo $logar->getNome();
+
+
+//Criando classe genérica
+
+class Veiculo{
+
+    protected $modelo;
+    public $cor;
+    public $ano;
+
+    public function Andar(){
+
+    }
+
+    public function Parar(){
+
+    }
+
+    public function setModelo($m){
+        $this->modelo = $m;
+    }
+    public function getModelo(){
+        return  $this->modelo;
+    }
+}
+
+
+
+
+
+class Carro extends Veiculo{
+
+    public $modelo;
+    public $cor;
+    public $ano;
+
+    public function Andar(){
+        echo "Andou";
+    }
+
+    public function Parar(){
+        echo "Parou";
+    }
+
+    public function limpador(){
+        echo "Liguei o limpador";
+    }
+
+   
+}
+
+class Moto extends Veiculo {
+
+    public $modelo;
+    public $cor;
+    public $ano;
+
+    public function Andar(){
+
+    }
+
+    public function Parar(){
+
+    }
+
+    public function grau(){
+        echo "Dei o grau";
+    }
+}
+
+// $carro = new Carro();
+// $carro->modelo = "Gol";
+// $carro->cor = "Vermelho";
+// $carro->modelo = "2018";
+// $carro->Andar();
+// var_dump($carro);
+// $moto = new Moto();
+// $moto->grau();
+$veiculo = new Veiculo();
+$veiculo->setModelo("HILUX");
+echo $veiculo->getModelo();
+
+//Estamos na aula 06
